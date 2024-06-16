@@ -1,19 +1,13 @@
-.navigation {
-    background-color: rgb(44, 36, 36);
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-}
-
 .nav_item {
     background-color: var(--secondary-color);
     height: 90px;
     width: 90px;
     transition: transform 1s ease-out;
-    /*margin: 5px;*/
+    cursor: pointer;
 }
-
-
+.nav_item.end {
+    background-color: var(--tertiary-color);
+}
 
 .nav_item:hover {
     transform: translateY(5px);
@@ -23,4 +17,3 @@
 .nav_item.clicked {
     transform: translateY(50%);
 }
-

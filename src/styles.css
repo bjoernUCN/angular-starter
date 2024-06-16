@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: rgb(98, 0, 255);
+}
+
+:root {
+    --primary-color: rgb(177, 9, 9);
+    --secondary-color: rgb(44, 36, 36);
+    --tertiary-color: rgb(255, 175, 175);
+}
+
+
+.accent {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
