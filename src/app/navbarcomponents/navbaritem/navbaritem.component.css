@@ -2,8 +2,12 @@
     background-color: var(--secondary-color);
     height: 90px;
     width: 90px;
-    transition: transform 1s ease-out;
+    transition: all 1s ease-out !important;
     cursor: pointer;
+
+    border-radius:0px;
+    border-color: aqua;
+    border-bottom: 4px;
 }
 .nav_item.end {
     background-color: var(--tertiary-color);
@@ -16,4 +20,9 @@
 
 .nav_item.clicked {
     transform: translateY(50%);
+    border-radius:10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.15s ease-in !important;
+
 }
