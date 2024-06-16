@@ -1,5 +1,7 @@
 <div class="nav_item accent" [ngClass]="{'end': isEnd, 'clicked': isClicked}" (click)="toggleClicked()">
-    <ng-content>
+    <div style="padding: 2px;">
+        <ng-content>
         
-    </ng-content>
+        </ng-content>
+    </div>
 </div>

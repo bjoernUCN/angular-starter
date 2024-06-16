@@ -6,12 +6,17 @@
     --primary-color: rgb(177, 9, 9);
     --secondary-color: rgb(44, 36, 36);
     --tertiary-color: rgb(255, 175, 175);
-}
+    --dark-contrast-color: rgb(31, 25, 25);
 
+}
 
 .accent {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+body{
+    margin: 0;
 }

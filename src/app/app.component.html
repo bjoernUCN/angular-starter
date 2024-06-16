@@ -1,47 +1,54 @@
 
-<main class="main">
-  <div class="content">
-    <div class="navigation">
-
-      <app-navbaritem>
-        t1 item
-      </app-navbaritem>
-      
-      <app-navbaritem>
-        t2 item
-      </app-navbaritem>
-
-      <app-navbaritem>
-        ayo
-      </app-navbaritem>
-
-      <div style="margin-left: auto;">
+<main class="main" style="margin:0; padding:0;">
+  <div class="background">
+    <div class="content">
+      <div class="navigation">
+  
+        <app-navbaritem>
+          Landing
+        </app-navbaritem>
+        
+        <app-navbaritem>
+          t2 item
+        </app-navbaritem>
+  
+        <app-navbaritem>
+          ayo
+        </app-navbaritem>
+  
+        <div class="seperator">
+          
+        </div>
         <app-navbaritem [isEnd]="true">
           ayo
         </app-navbaritem>
+  
+        <app-navbaritem [isEnd]="true">
+          epic
+        </app-navbaritem>
+  
+        <app-navbaritem [isEnd]="true">
+          gaming
+        </app-navbaritem>
+        
       </div>
+  
+     
       
+    
+      <div style="display: flex;">
+        <div class="page" style="width:60%; flex: 0 0 60%;">
+          <h1 class="accent">heading</h1> 
+        </div>
+        <div class="page" style="width:40%;">
+          aaa
+        </div>
+      </div>
+  
       
     </div>
-    <h1 class="accent">heading</h1>  
-  
-    
   </div>
+  
 </main>
 
 <router-outlet />
-
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const navItems = document.querySelectorAll('.nav_item');
-
-    navItems.forEach(item => {
-      item.addEventListener('click', function() {
-        // Remove 'clicked' class from all nav items
-        navItems.forEach(i => i.classList.remove('clicked'));
-        // Add 'clicked' class to the clicked nav item
-        this.classList.add('clicked');
-      });
-    });
-  });
-</script>

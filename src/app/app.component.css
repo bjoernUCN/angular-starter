@@ -1,26 +1,32 @@
 .navigation {
-    background-color: rgb(44, 36, 36);
+    background-color: var(--dark-contrast-color);
     height: 100px;
     display: flex;
     flex-direction: row;
 }
 
-.nav_item {
-    background-color: var(--secondary-color);
-    height: 90px;
-    width: 90px;
-    transition: transform 1s ease-out;
-    /*margin: 5px;*/
+.seperator{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    background-color: var(--dark-contrast-color);
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-
-.nav_item:hover {
-    transform: translateY(5px);
-    transition: transform 0.05s ease-in;
+.page{
+    flex: 1;
+    background-color: var(--dark-contrast-color);
 }
 
-.nav_item.clicked {
-    transform: translateY(50%);
+.background{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    background-color: black;
 }
 
+.body{
+    margin: 0px;
+}
