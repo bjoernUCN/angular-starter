@@ -9,10 +9,12 @@ import { FormsModule } from '@angular/forms';
 })
 export class ColorPickerComponent {
   @ViewChild('colorCanvas') colorCanvas!: ElementRef<HTMLCanvasElement>;
-  selectedColor: string = '#ff0000';
+  selectedColor: string = 'rgb(0, 0, 0)';
+  complementaryColor: string = '';
   hue: number = 0;
   isPicking: boolean = false;
-  complementaryColor: string = '';
+  pointerX: number = 0;
+  pointerY: number = 0;
 
   ngAfterViewInit(): void {
     this.drawColorBox();
@@ -26,7 +28,7 @@ export class ColorPickerComponent {
       const width = canvas.width;
       const height = canvas.height;
 
-      // Clear the canvas
+      // Clear canvas
       ctx.clearRect(0, 0, width, height);
 
       // Create gradient
@@ -43,7 +45,31 @@ export class ColorPickerComponent {
 
       ctx.fillStyle = gradientV;
       ctx.fillRect(0, 0, width, height);
+
+      // Draw pointer
+      if (this.pointerX && this.pointerY) {
+        this.drawPointer(ctx, this.pointerX, this.pointerY);
+      }
     }
+  }
+
+  drawPointer(ctx: CanvasRenderingContext2D, x: number, y: number): void {
+    const pointerRadius = 5;
+    const outerRadius = pointerRadius + 2;
+
+    // Draw outer ring (complementary color)
+    ctx.strokeStyle = this.complementaryColor;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(x, y, outerRadius, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Draw inner ring (selected color)
+    ctx.strokeStyle = this.selectedColor;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(x, y, pointerRadius, 0, Math.PI * 2);
+    ctx.stroke();
   }
 
   getColorAtPosition(x: number, y: number): string {
@@ -55,7 +81,7 @@ export class ColorPickerComponent {
       const r = imageData[0];
       const g = imageData[1];
       const b = imageData[2];
-      return `rgb(${r}, ${g}, ${b})`;
+      return `RGB(${r}, ${g}, ${b})`;
     }
     return '#000';
   }
@@ -72,6 +98,9 @@ export class ColorPickerComponent {
       const y = event.clientY - rect.top;
       this.selectedColor = this.getColorAtPosition(x, y);
       this.complementaryColor = this.getComplementaryColor(this.selectedColor);
+      this.pointerX = x;
+      this.pointerY = y;
+      this.drawColorBox();  // Redraw the canvas to update the pointer
     }
   }
 
