@@ -1,8 +1,8 @@
 <!-- full-color-picker.component.html -->
 <div class="color-picker-container">
-    <canvas #colorCanvas width="200" height="100" (mousedown)="startPicking($event)" (mousemove)="pickColor($event)" (mouseup)="stopPicking()" (mouseleave)="stopPicking()"></canvas>
+    <canvas #colorCanvas width="200" height="120" (mousedown)="startPicking($event)" (mousemove)="pickColor($event)" (mouseup)="stopPicking()" (mouseleave)="stopPicking()"></canvas>
     <input type="range" min="0" max="360" [(ngModel)]="hue" (input)="updateHue()" class="hue-slider" />
+    <div class="color-value-display" [style.color]="selectedColor" [style.background]="complementaryColor">{{ selectedColor }}</div>
     <div class="color-display" [style.background]="selectedColor"></div>
-    <input type="text" [(ngModel)]="selectedColor" readonly />
   </div>
   

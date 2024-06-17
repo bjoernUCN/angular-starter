@@ -12,6 +12,7 @@ export class ColorPickerComponent {
   selectedColor: string = '#ff0000';
   hue: number = 0;
   isPicking: boolean = false;
+  complementaryColor: string = '';
 
   ngAfterViewInit(): void {
     this.drawColorBox();
@@ -70,6 +71,7 @@ export class ColorPickerComponent {
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
       this.selectedColor = this.getColorAtPosition(x, y);
+      this.complementaryColor = this.getComplementaryColor(this.selectedColor);
     }
   }
 
@@ -79,5 +81,16 @@ export class ColorPickerComponent {
 
   updateHue(): void {
     this.drawColorBox();
+  }
+
+  getComplementaryColor(rgb: string): string {
+    const rgbArray = rgb.match(/\d+/g);
+    if (rgbArray) {
+      const r = 255 - parseInt(rgbArray[0], 10);
+      const g = 255 - parseInt(rgbArray[1], 10);
+      const b = 255 - parseInt(rgbArray[2], 10);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+    return '#000';
   }
 }

@@ -3,17 +3,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
     width: 200px;
-    height:400px;
+    height:200px;
     background-color: #363636;
 
  
   }
   
+    canvas{
+       cursor:crosshair;
+    }
+
   .color-display {
     width: 200px;
-    height: 50px;
+    height: 40px;
     margin: 0;
     padding: 0;
     border: 0px solid #000;
@@ -23,12 +27,26 @@
   input[type="range"] {
     margin: 0;
     padding: 0;
-    border-radius: 90px;
+    border-radius: 0px;
     border-style: none;
     width: 200px;
     cursor: pointer;
   }
-  
+
+  .color-value-display {
+    width: 200px;
+    height: 25px;
+    padding: 0px;
+    margin-top: 0px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    border-radius: 0px;
+    font: 20px 'Times New Roman', Times, serif;
+  }
+
+
+
   .hue-slider {
     -webkit-appearance: none;
     appearance: none;
@@ -51,9 +69,11 @@
   .hue-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
+    width: 4px;
     height: 15px;
-    border-radius: 50%;
+    border-radius: 0;
     cursor: pointer;
-    border: 2px solid var(--dark-contrast-color);
-  }
+    border: 1px solid var(--dark-contrast-color);
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}
