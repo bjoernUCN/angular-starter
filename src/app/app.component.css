@@ -24,9 +24,10 @@
     flex-direction: column;
     margin: 0;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(35, 35, 43);
 }
 
-.body{
-    margin: 0px;
+.pageholder{ /*for background colored border around page*/
+    margin: 8px;
+    padding: 8px;
 }
