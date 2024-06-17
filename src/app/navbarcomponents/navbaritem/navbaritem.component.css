@@ -2,7 +2,7 @@
     background-color: var(--secondary-color);
     height: 90px;
     width: 90px;
-    transition: all 0.6s ease-out !important;
+    transition: all 0.1s ease-out !important;
     cursor: pointer;
     text-shadow: none;
     
@@ -11,6 +11,7 @@
 .nav_item.end {
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
+    transition: all 0.6s ease-out !important;
 }
 
 
