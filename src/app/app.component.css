@@ -30,4 +30,12 @@
 .pageholder{ /*for background colored border around page*/
     margin: 8px;
     padding: 8px;
+    overflow: hidden;
+}
+
+.pageholder{ /*might keep this*/
+    position: relative;
+    /*height: auto;*/
+    height: 100%;
+    overflow: hidden;
 }

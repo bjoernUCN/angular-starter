@@ -1,0 +1,26 @@
+/* leaf.component.css */
+.leaf {
+    position: absolute;
+    top: -90px; 
+    width: 200px; 
+    height: 70px;
+    background-image: url('../../assets/leaf1.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running; 
+    pointer-events: auto; 
+    cursor: grab; 
+  }
+  
+ 
+@keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(calc(100vh + 50px)) rotate(360deg);
+    }
+  }

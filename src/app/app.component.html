@@ -3,19 +3,14 @@
   <div class="background">
     <div class="pageholder">
       <div class="navigation">
-<<<<<<< Updated upstream
-  
-=======
-
->>>>>>> Stashed changes
-        <app-navbaritem>
+        <app-navbaritem grouptag="main">
           Landing
         </app-navbaritem>
-        <app-navbaritem >
+        <app-navbaritem grouptag="main">
           t2 item
         </app-navbaritem>
 
-        <app-navbaritem route="colors">
+        <app-navbaritem route="colors" grouptag="main">
           colors
         </app-navbaritem>
 
@@ -35,25 +30,15 @@
         </app-navbaritem>
 
       </div>
-<<<<<<< Updated upstream
-  
-     
-      
-    
-      <div style="display: flex;">
-        <div class="page" style="width:60%; flex: 0 0 60%;">
-          <h1 class="accent">heading</h1> 
-=======
 
       <div style="display: flex;">
         <div class="page" style="width:60%; flex: 0 0 60%;">
           <h1 class="accent">heading</h1>
 
 
->>>>>>> Stashed changes
         </div>
-        <div class="page" style="width:40%;">
-          aaa
+        <div class="page" style="width:40%; overflow: hidden;">
+          <app-leaf *ngFor="let leaf of leaves" [positionX]="leaf.positionX" [duration]="leaf.duration"></app-leaf>
         </div>
       </div>
       <router-outlet name="primary" />
