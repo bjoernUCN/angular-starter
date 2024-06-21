@@ -4,7 +4,7 @@
     top: -90px; 
     width: 200px; 
     height: 70px;
-    background-image: url('../../assets/leaf1.png'); 
+    background-image: url('../../../assets/leaf1.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     animation-name: fall;

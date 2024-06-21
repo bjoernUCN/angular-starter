@@ -34,15 +34,16 @@
       <div style="display: flex;">
         <div class="page" style="width:60%; flex: 0 0 60%;">
           <h1 class="accent">heading</h1>
-
+          <router-outlet name="primary" />
 
         </div>
-        <div class="page" style="width:40%; overflow: hidden;">
-          <app-leaf *ngFor="let leaf of leaves" [positionX]="leaf.positionX" [duration]="leaf.duration"></app-leaf>
+        <div class="page" style="width:40%; flex: 0 0 40%;">
+          <app-tree></app-tree>
+          <router-outlet name="secondary" />
+
+          <!--app-leaf *ngFor="let leaf of leaves" [positionX]="leaf.positionX" [duration]="leaf.duration"></app-leaf-->
         </div>
       </div>
-      <router-outlet name="primary" />
-      <router-outlet name="secondary" />
 
 
     </div>

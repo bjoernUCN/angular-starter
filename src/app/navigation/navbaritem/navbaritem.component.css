@@ -5,7 +5,7 @@
     transition: all 0.1s ease-out !important;
     cursor: pointer;
     text-shadow: none;
-    
+    z-index: 50;
 
 }
 .nav_item.end {
@@ -41,4 +41,8 @@
     
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 
+}
+
+:host{
+    z-index: 10;
 }

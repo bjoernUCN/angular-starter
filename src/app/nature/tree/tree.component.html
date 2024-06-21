@@ -1,0 +1,7 @@
+<div style="background: linear-gradient(#e66465, #9198e5);">
+
+</div>
+<div class="border">
+    <img class="treeimg" src="../../../assets/tree1.png" alt="img"/>
+    <app-leaf *ngFor="let leaf of leaves" [positionX]="leaf.positionX" [duration]="leaf.duration"></app-leaf>
+</div>

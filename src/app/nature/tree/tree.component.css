@@ -1,0 +1,21 @@
+.border{
+    overflow: hidden;
+    background-color: var(--dark-contrast-color);
+    border-radius: 5px;
+    border: solid, 1px;
+    border-color: var(--tertiary-color);
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.treeimg{
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+:host{
+    height: auto;
+    
+}

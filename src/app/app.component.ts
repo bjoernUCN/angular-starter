@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { RouterModule } from '@angular/router';
 import { LeafComponent } from './nature/leaf/leaf.component';
+import { TreeComponent } from './nature/tree/tree.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbaritemComponent, NgFor, FormsModule, ColorPickerComponent, RouterModule, LeafComponent],
+  imports: [RouterOutlet, NavbaritemComponent, NgFor, FormsModule, ColorPickerComponent, RouterModule, LeafComponent, TreeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
